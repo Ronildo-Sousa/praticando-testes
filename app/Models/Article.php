@@ -9,6 +9,10 @@ class Article extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'title', 'content', 'num_likes', 'published_at', 'user_id'
+    ];
+
     public function user()
     {
         return $this->belongsTo(User::class);
