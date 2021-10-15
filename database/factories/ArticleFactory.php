@@ -25,7 +25,7 @@ class ArticleFactory extends Factory
             'title' => $this->faker->sentence(4),
             'content' => $this->faker->sentence(30),
             'num_likes' => random_int(1, 50),
-            'published_at' => now()
+            'published_at' => "2021-10-11 10:12:25"
         ];
     }
 }

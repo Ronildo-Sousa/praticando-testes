@@ -31,7 +31,12 @@ class ArticleController extends Controller
 
     public function show($id)
     {
-        //
+        $article = Article::find($id);
+
+        if ($article) {
+            return response()->json(['article' => $article], Response::HTTP_OK);
+        }
+        return response()->json(['message' => 'Article not found'], Response::HTTP_NOT_FOUND);
     }
 
 
